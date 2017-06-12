@@ -218,7 +218,7 @@ function Invoke-ChocolateyPackageInstaller
 
     $secPassword = ConvertTo-SecureString -String $Password -AsPlainText -Force
     $credential = New-Object System.Management.Automation.PSCredential("$env:COMPUTERNAME\$($UserName)", $secPassword)
-    $command = "$PSScriptRoot\ChocolateyPackageInstaller.ps1"
+    $command = "$PSScriptRoot\SSMSInstll.ps1"
 
     $oldPolicyValue = Set-LocalAccountTokenFilterPolicy
     try
